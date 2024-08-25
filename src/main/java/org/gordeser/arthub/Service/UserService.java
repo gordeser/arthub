@@ -36,7 +36,7 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public UserEntity updateUser(Long userId, UserEntity user) throws Exception {
+    public UserEntity updateUserById(Long userId, UserEntity user) throws Exception {
         UserEntity userToUpdate = userRepository.findById(userId).orElseThrow(Exception::new);
 
         // todo: make user updating
