@@ -22,7 +22,7 @@ public class TagService {
     }
 
     public TagEntity createTag(TagEntity tag) {
-        tagRepository.findById(tag.getId()).ifPresent(t -> {
+        tagRepository.findByName(tag.getName()).ifPresent(t -> {
             throw new RuntimeException();
         });
 
